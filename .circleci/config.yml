@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   # Job one with a unique name
-  say_hi:
+  say_hi_to_yml:
     docker:
      - image: cimg/base:2022.05
     steps:
@@ -10,10 +10,10 @@ jobs:
 
 workflows:
   # Name of workflow
-  hi:
+  hi_1:
     # List of jobs that will run
     jobs:
-      - say_hi
-  hi_again:
+      - say_hi_to_yml
+  hi_2:
     jobs:
-      - say_hi
+      - say_hi_to_yml
